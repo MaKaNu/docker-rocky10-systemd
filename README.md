@@ -42,7 +42,7 @@ or merged to the `main` branch. But if you need to build the image on your own l
   ```yaml
   platforms:
     - name: ${MOLECULE_NAME:-instance}
-      image: ${MOLECULE_IMAGE:-trfore/docker-{DISTRO}-systemd}
+      image: ${MOLECULE_IMAGE:-trfore/docker-rocky10-systemd}
       command: ${MOLECULE_COMMAND:-""}
       tmpfs:
         - /run
