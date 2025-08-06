@@ -3,7 +3,7 @@
 [![CI](https://github.com/makanu/docker-rocky10-systemd/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/makanu/docker-rocky10-systemd/actions/workflows/ci.yml)
 [![CD](https://github.com/makanu/docker-rocky10-systemd/actions/workflows/cd.yml/badge.svg?branch=main)](https://github.com/makanu/docker-rocky10-systemd/actions/workflows/cd.yml)
 
-A minimal systemd enabled {DISTRO} Docker image for testing Ansible roles with Molecule.
+A minimal systemd enabled rocky10 Docker image for testing Ansible roles with Molecule.
 
 NOTE: This image does NOT contain Ansible tooling, e.g. `ansible-core` or `yamllint`. Thus, the use case is as target
 host for Ansible controllers or within the Molecule `create`/`converge`/`test` cycle.
@@ -41,8 +41,9 @@ or merged to the `main` branch. But if you need to build the image on your own l
 
   ```yaml
   platforms:
-    - name: instance
-      image: makanu/docker-rocky10-systemd:latest
+    - name: ${MOLECULE_NAME:-instance}
+      image: ${MOLECULE_IMAGE:-trfore/docker-{DISTRO}-systemd}
+      command: ${MOLECULE_COMMAND:-""}
       tmpfs:
         - /run
         - /tmp
