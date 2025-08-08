@@ -1,1 +1,1 @@
-{ "baseos": { "name": "", "digest": "", "layer": "", "created": "" } }
+{ "baseos": { "name": "docker.io/rockylinux/rockylinux", "digest": "sha256:02564b26a5d147fcdbd1058abd9b358008f5608b382dcb288cfc718d627256cb", "layer": "sha256:228bbfd878c4d0f4b726b58c6d37262d9a01299efb1e3d57d661ba7d08e40829", "created": "2025-06-06T16:41:09.07472286Z" } }
